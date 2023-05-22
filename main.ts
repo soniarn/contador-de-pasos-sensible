@@ -1,13 +1,17 @@
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.clearScreen()
+    basic.showString("" + (pasos * 67))
+})
 input.onButtonPressed(Button.A, function () {
-    steps = 0
+    pasos = 0
     basic.showNumber(0)
 })
-let steps = 0
-steps = 0
+let pasos = 0
+pasos = 0
 basic.showNumber(0)
 basic.forever(function () {
-    if (input.acceleration(Dimension.Strength) > 1500) {
-        steps += 1
-        basic.showNumber(steps)
+    if (input.acceleration(Dimension.X) > 1500) {
+        pasos += 1
+        basic.showNumber(pasos)
     }
 })
