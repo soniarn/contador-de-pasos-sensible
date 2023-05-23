@@ -1,8 +1,11 @@
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.clearScreen()
-    basic.showString("" + (pasos * 67))
+    basic.showString("" + (pasos * 0.68))
 })
 input.onButtonPressed(Button.A, function () {
+    basic.showNumber(pasos)
+})
+input.onButtonPressed(Button.B, function () {
     pasos = 0
     basic.showNumber(0)
 })
